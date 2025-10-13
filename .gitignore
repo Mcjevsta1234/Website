@@ -1,0 +1,141 @@
+# ===============================
+# Common Binary Files
+# ===============================
+
+# Compiled source files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.out
+*.ko
+*.elf
+
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+*.pyd
+*.beam
+*.elc
+*.apk
+*.ipa
+*.app
+*.com
+*.bin
+*.msi
+*.deb
+*.rpm
+*.dmg
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Compiled dynamic libraries
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+
+# Images (binary media)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.ico
+*.icns
+*.psd
+*.xcf
+*.webp
+
+# Audio
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.m4a
+*.wma
+*.aac
+
+# Video
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Fonts
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Disk images / ISOs
+*.iso
+*.img
+*.vmdk
+*.vdi
+*.qcow2
+
+# Misc binaries / caches
+*.exe~
+*.bak
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Build artifacts
+/build/
+/bin/
+/dist/
+/out/
+/target/
+/coverage/
+/node_modules/
+
+# Package manager caches
+*.egg
+*.egg-info
+*.whl
+__pycache__/
+*.pdb
+
+# Compiled protobufs
+*.pb
+*.pb.cc
+*.pb.h
+
+# Machine learning / model binaries
+*.ckpt
+*.tflite
+*.onnx
+*.h5
+*.pt
+*.weights
+*.caffemodel
