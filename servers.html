@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WitchyWorlds Servers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="index.html"><span>✧</span>WitchyWorlds</a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a class="active" href="servers.html">Servers</a></li>
+            <li>
+              <a
+                class="discord-link"
+                href="https://discord.gg/zK4e4C8YJ5"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Discord</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h1>Current Servers</h1>
+        <p>
+          Choose the WitchyWorlds realm that suits your playstyle. Each server
+          lives under <strong>witchyworlds.top</strong>, is community-focused,
+          and ready for your next cottagecore quest.
+        </p>
+      </section>
+
+      <h2 class="section-title">WitchyWorlds Realms</h2>
+      <div class="server-grid">
+        <article class="server-card">
+          <div class="server-art">
+            <img
+              src="assets/img/server-atm10.png"
+              alt="Cozy pastel landscape representing the All the Mods 10 realm"
+              loading="lazy"
+            />
+            <span>ATM10</span>
+          </div>
+          <div class="server-content">
+            <h3>All the Mods 10</h3>
+            <div class="server-meta">
+              <span class="server-version">Version 4.11</span>
+              <button class="copy-wrapper" data-ip="atm10.witchyworlds.top" type="button">
+                <span>atm10.witchyworlds.top</span>
+                <strong>Copy IP</strong>
+              </button>
+            </div>
+            <p>
+              Our flagship kitchen-sink modpack with every toy you could want.
+              Build mega bases, tackle magical progressions, and collaborate on
+              community megaprojects without worrying about banned items.
+            </p>
+            <div class="server-tags">
+              <span class="server-tag">Kitchen Sink</span>
+              <span class="server-tag">Forge</span>
+              <span class="server-tag">Team Friendly</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="server-card">
+          <div class="server-art">
+            <img
+              src="assets/img/server-tts10.png"
+              alt="Dreamy skyblock vista representing the All the Mods to the Sky realm"
+              loading="lazy"
+            />
+            <span>TTS10</span>
+          </div>
+          <div class="server-content">
+            <h3>All the Mods to the Sky</h3>
+            <div class="server-meta">
+              <span class="server-version">Version 1.5</span>
+              <button class="copy-wrapper" data-ip="tts10.witchyworlds.top" type="button">
+                <span>tts10.witchyworlds.top</span>
+                <strong>Copy IP</strong>
+              </button>
+            </div>
+            <p>
+              Start on your very own floating island and automate your way
+              through the void. Perfect for players who love progression-based
+              skyblock challenges with WitchyWorlds community vibes.
+            </p>
+            <div class="server-tags">
+              <span class="server-tag">Skyblock</span>
+              <span class="server-tag">Automation</span>
+              <span class="server-tag">Co-op Ready</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="discord-cta">
+        Looking for new teammates or pack tips? Say hello in the
+        <a
+          class="discord-link"
+          href="https://discord.gg/zK4e4C8YJ5"
+          target="_blank"
+          rel="noopener noreferrer"
+          >WitchyWorlds Discord</a
+        >.
+      </p>
+
+      <footer>
+        <p>© <span id="year"></span> WitchyWorlds Network · Crafted with cottage charm.</p>
+        <nav aria-label="Footer">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="servers.html">Servers</a></li>
+            <li>
+              <a
+                class="discord-link"
+                href="https://discord.gg/zK4e4C8YJ5"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Discord</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+    <script>
+      const buttons = document.querySelectorAll(".copy-wrapper");
+      buttons.forEach((button) => {
+        button.addEventListener("click", async () => {
+          const ip = button.dataset.ip;
+          try {
+            await navigator.clipboard.writeText(ip);
+            const original = button.querySelector("strong").textContent;
+            button.querySelector("strong").textContent = "Copied!";
+            setTimeout(() => {
+              button.querySelector("strong").textContent = original;
+            }, 1600);
+          } catch (err) {
+            console.error("Clipboard copy failed", err);
+          }
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
